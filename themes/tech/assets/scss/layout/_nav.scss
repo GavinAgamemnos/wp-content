@@ -1,0 +1,114 @@
+.hamburger {
+  position: fixed;
+  right: 35px;
+  top: 15px;
+  transition: opacity .3s;
+  z-index: 4;
+
+    @include md-up {
+  		display: none;
+  	}
+
+    &:hover {
+      cursor: pointer;
+      opacity: .5;
+    }
+
+    .line {
+      width: 50px;
+      height: 3px;
+      background: rgb(236, 66, 66);
+      margin: 8px auto;
+      transition: all 0.3s ease-in-out;
+
+      &:nth-child(1) {
+        background-color: $DarkGrey;
+      }
+      &:nth-child(2) {
+        background-color: $DarkGrey;
+      }
+      &:nth-child(3) {
+        background-color: $DarkGrey;
+      }
+    }
+
+  &.isactive {
+    .line:nth-child(2) {
+      opacity: 0;
+    }
+    .line:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+      background-color: $White;
+    }
+    .line:nth-child(3) {
+      transform: translateY(-13px) rotate(-45deg);
+      background-color: $White;
+    }
+  }
+}
+
+
+.navbar {
+    width: 300px;
+    background: $DarkGrey;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    height: 100vh;
+    align-items: center;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 3;
+
+      @include md-up {
+    		width: 100%;
+        position: relative;
+        left: 0;
+        background: $White;
+        height: auto;
+    	}
+
+    ul {
+      margin-right: 35px;
+
+      li {
+        padding: 10px;
+
+        @include md-up {
+          display: inline-block;
+        }
+
+        a {
+          font-size: .9em;
+          color: $White;
+          position: relative;
+          text-decoration: none;
+          font-weight: 700;
+
+            &:after {
+            border-bottom: 1px solid $White;
+              @include md-up {
+                border-bottom: 1px solid $Black;
+              }
+            content: '';
+            width: 100%;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+          }
+
+          @include md-up {
+            color: $Black;
+          }
+        }
+      }
+    }
+
+    &.active {
+      display: flex;
+      right: 0;
+      transition: all .3s ease-in-out;
+
+    }
+  }

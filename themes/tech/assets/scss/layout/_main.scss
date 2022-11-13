@@ -1,0 +1,105 @@
+.container {
+  padding-bottom: 70px;
+  padding-left: 35px;
+  padding-right: 35px;
+
+    @include md-up {
+      padding-left: auto;
+      padding-right: auto;
+    }
+}
+
+.cover-image {
+  position: relative;
+  padding-top: 70px;
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid $DarkGrey;
+    padding: 10px;
+  }
+
+  .ball {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+  }
+}
+
+.product-details {
+  text-align: left;
+  box-sizing: border-box;
+  padding-top: 70px;
+
+    @include md-up {
+      padding-left: 35px;
+    }
+
+  .release {
+    font-size: .8rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  ul.formats {
+    padding: 0;
+
+    li {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0 2px;
+      font-size: .7rem;
+
+      &:after {
+        content: ',';
+      }
+
+      &:last-child {
+        &:after {
+          content: '';
+        }
+      }
+    }
+  }
+
+  .prices {
+    font-size: .8rem;
+    .price {
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-right: 15px;
+    }
+  }
+
+  .buy {
+      margin-top: 35px;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    padding: 10px 15px;
+    font-weight: 700;
+    border: solid 2px $Black;
+    text-decoration: none;
+    color: $Black;
+    display: inline-block;
+  }
+
+  .dropdown {
+    float: right;
+
+    .dropdown-menu {
+      border: 2px solid;
+      border-radius: 0px;
+
+        .dropdown-item {
+          padding: 0.25rem 2rem 0.25rem 1rem;
+        }
+    }
+  }
+
+
+
+}

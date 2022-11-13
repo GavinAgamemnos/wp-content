@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  font-family: 'Poppins';
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: $Black;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
